@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Inspection Form </title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<form name="submit-to-google-sheet" enctype="multipart/form-data">
+			<fieldset>
+				<legend> Inspection Information</legend>
+				<input id="email" name="email" type="email" placeholder="Email Address" required>
+				<input name="firstName" type="text" placeholder="First Name" required>
+				<input name="lastName" type="text" placeholder="Last Name" required>
+				
+				<label for="location"> Choose a store location</label>
+				<select name="location" id="location">
+					<option value="Belconnen"> Belconnen</option>
+					<option value="CBD"> CBD</option>
+					<option value="Casey"> Casey</option>
+					<option value="Chisholm"> Chisholm</option>
+					<option value="Conder"> Conder</option>
+					<option value="Cooma"> Cooma</option>
+					<option value="Goulburn"> Goulburn</option>
+					<option value="Gunghalin"> Gunghalin</option>
+					<option value="Kippax-Holt"> Kippax-Holt</option>
+					<option value="Kippax-Holt"> Kippax-Holt</option>
+					<option value="Maquarie"> Maquarie</option>
+					<option value="Majura Park"> Majura Park</option>
+					<option value="Queanbeyan"> Queanbeyan</option>
+					<option value="Tuggeranong"> Tuggeranong</option>
+					<option value="Weston"> Weston</option>
+					<option value="Yass"> Yass</option>
+				</select>
+			</fieldset>
+
+			<fieldset>
+				<legend class="task-area-heading"> Trolley bay & external entry/exit area</legend>
+				<div class="task" id="tbfloor">
+					<span class="task-heading"> Trolley bay and surrounding area floor: </span>
+					<input type="radio" id="Trolley bay and surrounding floor area1" name="Trolley bay and surrounding floor area" value="Highly Satisfactory">
+					<label for="Trolley bay and surrounding floor area1">Highly Satisfactory</label>
+					<input type="radio" id="Trolley bay and surrounding floor area2" name="Trolley bay and surrounding floor area" value="Satisfactory">
+					<label for="Trolley bay and surrounding floor area2">Satisfactory</label>
+					<input type="radio" id="Trolley bay and surrounding floor area3" name="Trolley bay and surrounding floor area" value="Unsatisfactory">
+					<label for="Trolley bay and surrounding floor area3">Unsatisfactory</label>
+					<input type="radio" id="Trolley bay and surrounding floor area4" name="Trolley bay and surrounding floor area" value="Highly Unsatisfactory">
+					<label for="Trolley bay and surrounding floor area4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Trolley bay and surrounding floor area4" name="Trolley bay and surrounding floor area" value="Not Applicable">
+					<label for="Trolley bay and surrounding floor area4"> Not Applicable</label>
+				</div>
+				<div class="task" id="tbbseats">
+					<span class="task-heading"> Baby seats: </span>
+					<input type="radio" id="BabySeats1" name="BabySeats" value="Highly Satisfactory">
+					<label for="BabySeats1">Highly Satisfactory</label>
+					<input type="radio" id="BabySeats2" name="BabySeats" value="Satisfactory">
+					<label for="BabySeats2">Satisfactory</label>
+					<input type="radio" id="BabySeats3" name="BabySeats" value="Unsatisfactory">
+					<label for="BabySeats3">Unsatisfactory</label>
+					<input type="radio" id="BabySeats4" name="BabySeats" value="Highly Unsatisfactory">
+					<label for="BabySeats4"> Highly Unsatisfactory</label>
+					<input type="radio" id="BabySeats4" name="BabySeats" value="Not Applicable">
+					<label for="BabySeats4"> Not Applicable</label>
+				</div>
+				<div class="task" id="tbmetalrailing">
+					<span class="task-heading"> Metal railing: </span>
+					<input type="radio" id="Metalrailing1" name="Metalrailing" value="Highly Satisfactory">
+					<label for="Metalrailing1">Highly Satisfactory</label>
+					<input type="radio" id="Metalrailing2" name="Metalrailing" value="Satisfactory">
+					<label for="Metalrailing2">Satisfactory</label>
+					<input type="radio" id="Metalrailing3" name="Metalrailing" value="Unsatisfactory">
+					<label for="Metalrailing3">Unsatisfactory</label>
+					<input type="radio" id="Metalrailing4" name="Metalrailing" value="Highly Unsatisfactory">
+					<label for="Metalrailing4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Metalrailing4" name="Metalrailing" value="Not Applicable">
+					<label for="Metalrailing4"> Not Applicable</label>
+				</div>
+				<div class="task" id="tbbins">
+					<span class="task-heading"> Bins: </span>
+					<input type="radio" id="Bins1" name="Bins" value="Highly Satisfactory">
+					<label for="Bins1">Highly Satisfactory</label>
+					<input type="radio" id="Bins2" name="Bins" value="Satisfactory">
+					<label for="Bins2">Satisfactory</label>
+					<input type="radio" id="Bins3" name="Bins" value="Unsatisfactory">
+					<label for="Bins3">Unsatisfactory</label>
+					<input type="radio" id="Bins4" name="Bins" value="Highly Unsatisfactory">
+					<label for="Bins4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Bins4" name="Bins" value="Not Applicable">
+					<label for="Bins4"> Not Applicable</label>
+				</div>
+				<textarea class="task-area-comment"	id="tbextcomments" name="Trolley bay & external additional comments" placeholder="Additional comments."></textarea>	
+			</fieldset>
+
+			<fieldset>
+				<legend class="task-area-heading"> Internal entry/exit area</legend>
+				<div class="task" id="intLBglass">
+					<span class="task-heading"> Liquor block glass and perspex: </span>
+					<input type="radio" id="Liquor glass and perspex1" name="Liquor glass and perspex" value="Highly Satisfactory">
+					<label for="Liquor glass and perspex1">Highly Satisfactory</label>
+					<input type="radio" id="Liquor glass and perspex2" name="Liquor glass and perspex" value="Satisfactory">
+					<label for="Liquor glass and perspex2">Satisfactory</label>
+					<input type="radio" id="Liquor glass and perspex3" name="Liquor glass and perspex" value="Unsatisfactory">
+					<label for="Liquor glass and perspex3">Unsatisfactory</label>
+					<input type="radio" id="Liquor glass and perspex4" name="Liquor glass and perspex" value="Highly Unsatisfactory">
+					<label for="Liquor glass and perspex4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Liquor glass and perspex4" name="Liquor glass and perspex" value="Not Applicable">
+					<label for="Liquor glass and perspex4"> Not Applicable</label>
+				</div>
+				<div class="task" id="intLBbumper">
+					<span class="task-heading"> Liquor block stainless bumper: </span>
+					<input type="radio" id="Liquor block stainless bumper1" name="Liquor block stainless bumper" value="Highly Satisfactory">
+					<label for="Liquor block stainless bumper1">Highly Satisfactory</label>
+					<input type="radio" id="Liquor block stainless bumper2" name="Liquor block stainless bumper" value="Satisfactory">
+					<label for="Liquor block stainless bumper2">Satisfactory</label>
+					<input type="radio" id="Liquor block stainless bumper3" name="Liquor block stainless bumper" value="Unsatisfactory">
+					<label for="Liquor block stainless bumper3">Unsatisfactory</label>
+					<input type="radio" id="Liquor block stainless bumper4" name="Liquor block stainless bumper" value="Highly Unsatisfactory">
+					<label for="Liquor block stainless bumper4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Liquor block stainless bumper4" name="Liquor block stainless bumper" value="Not Applicable">
+					<label for="Liquor block stainless bumper4"> Not Applicable</label>
+				</div>
+				<div class="task" id="airlockwin">
+					<span class="task-heading"> Airlock windows: </span>
+					<input type="radio" id="Airlock windows1" name="Airlock windows" value="Highly Satisfactory">
+					<label for="Airlock windows1">Highly Satisfactory</label>
+					<input type="radio" id="Airlock windows2" name="Airlock windows" value="Satisfactory">
+					<label for="Airlock windows2">Satisfactory</label>
+					<input type="radio" id="Airlock windows3" name="Airlock windows" value="Unsatisfactory">
+					<label for="Airlock windows3">Unsatisfactory</label>
+					<input type="radio" id="Airlock windows4" name="Airlock windows" value="Highly Unsatisfactory">
+					<label for="Airlock windows4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Airlock windows4" name="Airlock windows" value="Not Applicable">
+					<label for="Airlock windows4"> Not Applicable</label>
+				</div>
+				<div class="task" id="cobwebs">
+					<span class="task-heading"> Cobwebs: </span>
+					<input type="radio" id="Cobwebs1" name="Cobwebs" value="Highly Satisfactory">
+					<label for="Cobwebs1">Highly Satisfactory</label>
+					<input type="radio" id="Cobwebs2" name="Cobwebs" value="Satisfactory">
+					<label for="Cobwebs2">Satisfactory</label>
+					<input type="radio" id="Cobwebs3" name="Cobwebs" value="Unsatisfactory">
+					<label for="Cobwebs3">Unsatisfactory</label>
+					<input type="radio" id="Cobwebs4" name="Cobwebs" value="Highly Unsatisfactory">
+					<label for="Cobwebs4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Cobwebs4" name="Cobwebs" value="Not Applicable">
+					<label for="Cobwebs4"> Not Applicable</label>
+				</div>
+				<div class="task" id="entrymat">
+					<span class="task-heading"> Entry mat: </span>
+					<input type="radio" id="Entry mat1" name="Entry mat" value="Highly Satisfactory">
+					<label for="Entry mat1">Highly Satisfactory</label>
+					<input type="radio" id="Entry mat2" name="Entry mat" value="Satisfactory">
+					<label for="Entry mat2">Satisfactory</label>
+					<input type="radio" id="Entry mat3" name="Entry mat" value="Unsatisfactory">
+					<label for="Entry mat3">Unsatisfactory</label>
+					<input type="radio" id="Entry mat4" name="Entry mat" value="Highly Unsatisfactory">
+					<label for="Entry mat4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Entry mat4" name="Entry mat" value="Not Applicable">
+					<label for="Entry mat4"> Not Applicable</label>
+				</div>
+				<textarea class="task-area-comment"	id="intcomments" name="Internal entry/exit additional comments" placeholder="Additional comments."></textarea>	
+			</fieldset>
+			<fieldset>
+				<legend class="task-area-heading"> Chiller</legend>
+				<div class="task" id="Cperspex">
+					<span class="task-heading"> Chiller perspex: </span>
+					<input type="radio" id="Chiller perspex1" name="Chiller perspex" value="Highly Satisfactory">
+					<label for="Chiller perspex1">Highly Satisfactory</label>
+					<input type="radio" id="Chiller perspex2" name="Chiller perspex" value="Satisfactory">
+					<label for="Chiller perspex2">Satisfactory</label>
+					<input type="radio" id="Chiller perspex3" name="Chiller perspex" value="Unsatisfactory">
+					<label for="Chiller perspex3">Unsatisfactory</label>
+					<input type="radio" id="Chiller perspex4" name="Chiller perspex" value="Highly Unsatisfactory">
+					<label for="Chiller perspex4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Chiller perspex4" name="Chiller perspex" value="Not Applicable">
+					<label for="Chiller perspex4"> Not Applicable</label>
+				</div>
+				<div class="task" id="Cmilkstrip">
+					<span class="task-heading"> Milk chiller price stripping: </span>
+					<input type="radio" id="Milk chiller price stripping1" name="Milk chiller price stripping" value="Highly Satisfactory">
+					<label for="Milk chiller price stripping1">Highly Satisfactory</label>
+					<input type="radio" id="Milk chiller price stripping2" name="Milk chiller price stripping" value="Satisfactory">
+					<label for="Milk chiller price stripping2">Satisfactory</label>
+					<input type="radio" id="Milk chiller price stripping3" name="Milk chiller price stripping" value="Unsatisfactory">
+					<label for="Milk chiller price stripping3">Unsatisfactory</label>
+					<input type="radio" id="Milk chiller price stripping4" name="Milk chiller price stripping" value="Highly Unsatisfactory">
+					<label for="Milk chiller price stripping4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Milk chiller price stripping4" name="Milk chiller price stripping" value="Not Applicable">
+					<label for="Milk chiller price stripping4"> Not Applicable</label>
+				</div>
+				<div class="task" id="Cgrates">
+					<span class="task-heading"> Metal grates: </span>
+					<input type="radio" id="Metal grates1" name="Metal grates" value="Highly Satisfactory">
+					<label for="Metal grates1">Highly Satisfactory</label>
+					<input type="radio" id="Metal grates2" name="Metal grates" value="Satisfactory">
+					<label for="Metal grates2">Satisfactory</label>
+					<input type="radio" id="Metal grates3" name="Metal grates" value="Unsatisfactory">
+					<label for="Metal grates3">Unsatisfactory</label>
+					<input type="radio" id="Metal grates4" name="Metal grates" value="Highly Unsatisfactory">
+					<label for="Metal grates4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Metal grates4" name="Metal grates" value="Not Applicable">
+					<label for="Metal grates4"> Not Applicable</label>
+				</div>
+				<div class="task" id="Cbumpers">
+					<span class="task-heading"> Stainless bumpers: </span>
+					<input type="radio" id="Stainless bumpers1" name="Stainless bumpers" value="Highly Satisfactory">
+					<label for="Stainless bumpers1">Highly Satisfactory</label>
+					<input type="radio" id="Stainless bumpers2" name="Stainless bumpers" value="Satisfactory">
+					<label for="Stainless bumpers2">Satisfactory</label>
+					<input type="radio" id="Stainless bumpers3" name="Stainless bumpers" value="Unsatisfactory">
+					<label for="Stainless bumpers3">Unsatisfactory</label>
+					<input type="radio" id="Stainless bumpers4" name="Stainless bumpers" value="Highly Unsatisfactory">
+					<label for="Stainless bumpers4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Stainless bumpers4" name="Stainless bumpers" value="Not Applicable">
+					<label for="Stainless bumpers4"> Not Applicable</label>
+				</div>
+				<textarea class="task-area-comment"	id="intcomments" name="Chiller additional comments" placeholder="Additional comments."></textarea>	
+			</fieldset>
+			<fieldset>
+				<legend class="task-area-heading"> Staff amenities </legend>
+				<div class="task" id="SAsurfaces">
+					<span class="task-heading"> Hard surfaces and splash back: </span>
+					<input type="radio" id="Hard surfaces and splash back1" name="Hard surfaces and splash back" value="Highly Satisfactory">
+					<label for="Hard surfaces and splash back1">Highly Satisfactory</label>
+					<input type="radio" id="Hard surfaces and splash back2" name="Hard surfaces and splash back" value="Satisfactory">
+					<label for="Hard surfaces and splash back2">Satisfactory</label>
+					<input type="radio" id="Hard surfaces and splash back3" name="Hard surfaces and splash back" value="Unsatisfactory">
+					<label for="Hard surfaces and splash back3">Unsatisfactory</label>
+					<input type="radio" id="Hard surfaces and splash back4" name="Hard surfaces and splash back" value="Highly Unsatisfactory">
+					<label for="Hard surfaces and splash back4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Hard surfaces and splash back4" name="Hard surfaces and splash back" value="Not Applicable">
+					<label for="Hard surfaces and splash back4"> Not Applicable</label>
+				</div>
+				<div class="task" id="SAfloor">
+					<span class="task-heading"> Kitchen floor: </span>
+					<input type="radio" id="Kitchen floor1" name="Kitchen floor" value="Highly Satisfactory">
+					<label for="Kitchen floor1">Highly Satisfactory</label>
+					<input type="radio" id="Kitchen floor2" name="Kitchen floor" value="Satisfactory">
+					<label for="Kitchen floor2">Satisfactory</label>
+					<input type="radio" id="Kitchen floor3" name="Kitchen floor" value="Unsatisfactory">
+					<label for="Kitchen floor3">Unsatisfactory</label>
+					<input type="radio" id="Kitchen floor4" name="Kitchen floor" value="Highly Unsatisfactory">
+					<label for="Kitchen floor4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Kitchen floor4" name="Kitchen floor" value="Not Applicable">
+					<label for="Kitchen floor4"> Not Applicable</label>
+				</div>
+				<div class="task" id="SAcupboards">
+					<span class="task-heading"> Fridge, cupboards, and microwave: </span>
+					<input type="radio" id="Fridge, cupboards, and microwave1" name="Fridge, cupboards, and microwave" value="Highly Satisfactory">
+					<label for="Fridge, cupboards, and microwave1">Highly Satisfactory</label>
+					<input type="radio" id="Fridge, cupboards, and microwave2" name="Fridge, cupboards, and microwave" value="Satisfactory">
+					<label for="Fridge, cupboards, and microwave2">Satisfactory</label>
+					<input type="radio" id="Fridge, cupboards, and microwave3" name="Fridge, cupboards, and microwave" value="Unsatisfactory">
+					<label for="Fridge, cupboards, and microwave3">Unsatisfactory</label>
+					<input type="radio" id="Fridge, cupboards, and microwave4" name="Fridge, cupboards, and microwave" value="Highly Unsatisfactory">
+					<label for="Fridge, cupboards, and microwave4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Fridge, cupboards, and microwave4" name="Fridge, cupboards, and microwave" value="Not Applicable">
+					<label for="Fridge, cupboards, and microwave4"> Not Applicable</label>
+				</div>
+				<div class="task" id="SAbrsinkmirror">
+					<span class="task-heading"> Bathroom sink and mirror: </span>
+					<input type="radio" id="Bathroom sink and mirror1" name="Bathroom sink and mirror" value="Highly Satisfactory">
+					<label for="Bathroom sink and mirror1">Highly Satisfactory</label>
+					<input type="radio" id="Bathroom sink and mirror2" name="Bathroom sink and mirror" value="Satisfactory">
+					<label for="Bathroom sink and mirror2">Satisfactory</label>
+					<input type="radio" id="Bathroom sink and mirror3" name="Bathroom sink and mirror" value="Unsatisfactory">
+					<label for="Bathroom sink and mirror3">Unsatisfactory</label>
+					<input type="radio" id="Bathroom sink and mirror4" name="Bathroom sink and mirror" value="Highly Unsatisfactory">
+					<label for="Bathroom sink and mirror4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Bathroom sink and mirror4" name="Bathroom sink and mirror" value="Not Applicable">
+					<label for="Bathroom sink and mirror4"> Not Applicable</label>
+				</div>
+				<div class="task" id="SAbrtoilet">
+					<span class="task-heading"> Toilet: </span>
+					<input type="radio" id="Toilet1" name="Toilet" value="Highly Satisfactory">
+					<label for="Toilet1">Highly Satisfactory</label>
+					<input type="radio" id="Toilet2" name="Toilet" value="Satisfactory">
+					<label for="Toilet2">Satisfactory</label>
+					<input type="radio" id="Toilet3" name="Toilet" value="Unsatisfactory">
+					<label for="Toilet3">Unsatisfactory</label>
+					<input type="radio" id="Toilet4" name="Toilet" value="Highly Unsatisfactory">
+					<label for="Toilet4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Toilet4" name="Toilet" value="Not Applicable">
+					<label for="Toilet4"> Not Applicable</label>
+				</div>
+				<div class="task" id="SAbrfloor">
+					<span class="task-heading"> Bathroom floor: </span>
+					<input type="radio" id="Bathroom floor1" name="Bathroom floor" value="Highly Satisfactory">
+					<label for="Bathroom floor1">Highly Satisfactory</label>
+					<input type="radio" id="Bathroom floor2" name="Bathroom floor" value="Satisfactory">
+					<label for="Bathroom floor2">Satisfactory</label>
+					<input type="radio" id="Bathroom floor3" name="Bathroom floor" value="Unsatisfactory">
+					<label for="Bathroom floor3">Unsatisfactory</label>
+					<input type="radio" id="Bathroom floor4" name="Bathroom floor" value="Highly Unsatisfactory">
+					<label for="Bathroom floor4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Bathroom floor4" name="Bathroom floor" value="Not Applicable">
+					<label for="Bathroom floor4"> Not Applicable</label>
+				</div>
+				<div class="task" id="SAlobmirr">
+					<span class="task-heading"> Lobby mirror and door stainless: </span>
+					<input type="radio" id="Lobby mirror and door stainless1" name="Lobby mirror and door stainless" value="Highly Satisfactory">
+					<label for="Lobby mirror and door stainless1">Highly Satisfactory</label>
+					<input type="radio" id="Lobby mirror and door stainless2" name="Lobby mirror and door stainless" value="Satisfactory">
+					<label for="Lobby mirror and door stainless2">Satisfactory</label>
+					<input type="radio" id="Lobby mirror and door stainless3" name="Lobby mirror and door stainless" value="Unsatisfactory">
+					<label for="Lobby mirror and door stainless3">Unsatisfactory</label>
+					<input type="radio" id="Lobby mirror and door stainless4" name="Lobby mirror and door stainless" value="Highly Unsatisfactory">
+					<label for="Lobby mirror and door stainless4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Lobby mirror and door stainless4" name="Lobby mirror and door stainless" value="Not Applicable">
+					<label for="Lobby mirror and door stainless4"> Not Applicable</label>
+				</div>
+				<div class="task" id="SAlobflr">
+					<span class="task-heading"> Lobby floor: </span>
+					<input type="radio" id="Lobby floor1" name="Lobby floor" value="Highly Satisfactory">
+					<label for="Lobby floor1">Highly Satisfactory</label>
+					<input type="radio" id="Lobby floor2" name="Lobby floor" value="Satisfactory">
+					<label for="Lobby floor2">Satisfactory</label>
+					<input type="radio" id="Lobby floor3" name="Lobby floor" value="Unsatisfactory">
+					<label for="Lobby floor3">Unsatisfactory</label>
+					<input type="radio" id="Lobby floor4" name="Lobby floor" value="Highly Unsatisfactory">
+					<label for="Lobby floor4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Lobby floor4" name="Lobby floor" value="Not Applicable">
+					<label for="Lobby floor4"> Not Applicable</label>
+				</div>
+				<textarea class="task-area-comment"	id="intcomments" name="Staff amenities additional comments" placeholder="Additional comments."></textarea>	
+			</fieldset>
+			<fieldset>
+				<legend class="task-area-heading"> Loading dock and drain </legend>
+				<div class="task" id="loadingdkarea">
+					<span class="task-heading"> Loading dock area: </span>
+					<input type="radio" id="Loading dock area1" name="Loading dock area" value="Highly Satisfactory">
+					<label for="Loading dock area1">Highly Satisfactory</label>
+					<input type="radio" id="Loading dock area2" name="Loading dock area" value="Satisfactory">
+					<label for="Loading dock area2">Satisfactory</label>
+					<input type="radio" id="Loading dock area3" name="Loading dock area" value="Unsatisfactory">
+					<label for="Loading dock area3">Unsatisfactory</label>
+					<input type="radio" id="Loading dock area4" name="Loading dock area" value="Highly Unsatisfactory">
+					<label for="Loading dock area4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Loading dock area4" name="Loading dock area" value="Not Applicable">
+					<label for="Loading dock area4"> Not Applicable</label>
+				</div>
+				<div class="task" id="loadingdkbin">
+					<span class="task-heading"> Bin area: </span>
+					<input type="radio" id="Bin area1" name="Bin area" value="Highly Satisfactory">
+					<label for="Bin area1">Highly Satisfactory</label>
+					<input type="radio" id="Bin area2" name="Bin area" value="Satisfactory">
+					<label for="Bin area2">Satisfactory</label>
+					<input type="radio" id="Bin area3" name="Bin area" value="Unsatisfactory">
+					<label for="Bin area3">Unsatisfactory</label>
+					<input type="radio" id="Bin area4" name="Bin area" value="Highly Unsatisfactory">
+					<label for="Bin area4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Bin area4" name="Bin area" value="Not Applicable">
+					<label for="Bin area4"> Not Applicable</label>
+				</div>
+				<div class="task" id="loadingdkdrain">
+					<span class="task-heading"> Drain channels: </span>
+					<input type="radio" id="Drain channels1" name="Drain channels" value="Highly Satisfactory">
+					<label for="Drain channels1">Highly Satisfactory</label>
+					<input type="radio" id="Drain channels2" name="Drain channels" value="Satisfactory">
+					<label for="Drain channels2">Satisfactory</label>
+					<input type="radio" id="Drain channels3" name="Drain channels" value="Unsatisfactory">
+					<label for="Drain channels3">Unsatisfactory</label>
+					<input type="radio" id="Drain channels4" name="Drain channels" value="Highly Unsatisfactory">
+					<label for="Drain channels4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Drain channels4" name="Drain channels" value="Not Applicable">
+					<label for="Drain channels4"> Not Applicable</label>
+				</div>
+				<div class="task" id="loadingdkchute">
+					<span class="task-heading"> Compactor chute: </span>
+					<input type="radio" id="Compactor chute1" name="Compactor chute" value="Highly Satisfactory">
+					<label for="Compactor chute1">Highly Satisfactory</label>
+					<input type="radio" id="Compactor chute2" name="Compactor chute" value="Satisfactory">
+					<label for="Compactor chute2">Satisfactory</label>
+					<input type="radio" id="Compactor chute3" name="Compactor chute" value="Unsatisfactory">
+					<label for="Compactor chute3">Unsatisfactory</label>
+					<input type="radio" id="Compactor chute4" name="Compactor chute" value="Highly Unsatisfactory">
+					<label for="Compactor chute4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Compactor chute4" name="Compactor chute" value="Not Applicable">
+					<label for="Compactor chute4"> Not Applicable</label>
+				</div>
+				<div class="task" id="loadingdkintdrain">
+					<span class="task-heading"> Internal drain: </span>
+					<input type="radio" id="Internal drain1" name="Internal drain" value="Highly Satisfactory">
+					<label for="Internal drain1">Highly Satisfactory</label>
+					<input type="radio" id="Internal drain2" name="Internal drain" value="Satisfactory">
+					<label for="Internal drain2">Satisfactory</label>
+					<input type="radio" id="Internal drain3" name="Internal drain" value="Unsatisfactory">
+					<label for="Internal drain3">Unsatisfactory</label>
+					<input type="radio" id="Internal drain4" name="Internal drain" value="Highly Unsatisfactory">
+					<label for="Internal drain4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Internal drain4" name="Internal drain" value="Not Applicable">
+					<label for="Internal drain4"> Not Applicable</label>
+				</div>
+				<div class="task" id="loadingdkbkhouse">
+					<span class="task-heading"> Back of house: </span>
+					<input type="radio" id="Back of house1" name="Back of house" value="Highly Satisfactory">
+					<label for="Back of house1">Highly Satisfactory</label>
+					<input type="radio" id="Back of house2" name="Back of house" value="Satisfactory">
+					<label for="Back of house2">Satisfactory</label>
+					<input type="radio" id="Back of house3" name="Back of house" value="Unsatisfactory">
+					<label for="Back of house3">Unsatisfactory</label>
+					<input type="radio" id="Back of house4" name="Back of house" value="Highly Unsatisfactory">
+					<label for="Back of house4"> Highly Unsatisfactory</label>
+					<input type="radio" id="Back of house4" name="Back of house" value="Not Applicable">
+					<label for="Back of house4"> Not Applicable</label>
+				</div>
+				<!-- Will probably only be able to handle upload links for now.-->
+				
+				<label for="Back of house image" id="backhouseimg"> Add an image: </label>
+				<input type="file" id="Back of house image" name="Back of house image" >
+		
+				<br>
+				<textarea class="task-area-comment"	id="intcomments" name="Loading dock and drain additional comments" placeholder="Additional comments."></textarea>	
+			</fieldset>
+			<fieldset>
+				<legend class="task-area-heading"> Aldi management and staff comments </legend>
+				<textarea class="task-area-comment"	id="intcomments" name="Aldi management and staff comments" placeholder="Comments."></textarea>	
+			</fieldset>
+			
+			<input type="button" onclick="submit_form()" value="Submit inspection">
+			<input type="submit" id='subbtn' style="display: none;">
+		</form>
+		<script>
+		  const scriptURL = 'https://script.google.com/macros/s/AKfycbwwJzFE-Q9roiY7kv3N6awa94pjjoFE6Wb5roF6V4GKNKpe_B81/exec'
+		  const form = document.forms['submit-to-google-sheet']
+		  form.addEventListener('submit', e => {
+		    e.preventDefault()
+		    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		      .then(response => console.log('Success!', response))
+		      .catch(error => console.error('Error!', error.message))
+		  })
+		  function submit_form(){
+			const confirmation = confirm("Are you sure you wish to submit the inspection?");
+			if (confirmation) {
+				document.getElementById('subbtn').click();
+				document.forms['submit-to-google-sheet'].reset();
+			} 
+		  }
+		</script>
+
+		
+	</body>
+</html>

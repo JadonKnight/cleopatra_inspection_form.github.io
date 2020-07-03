@@ -1,0 +1,29 @@
+.task{
+    background-color: white;
+}
+
+input[type="radio"] {
+    margin-top: -3px;
+    vertical-align: middle;
+}
+
+/* .task-area-heading{
+    text-decoration: underline;
+} */
+
+.task-heading{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#backhouseimg {
+    font-weight: bold;
+}
+textarea {
+    resize: none;
+}
+
+.task-area-comment{
+    width: 500px;
+    height: 50px;
+}
