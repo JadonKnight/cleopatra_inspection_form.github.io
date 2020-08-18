@@ -18,6 +18,7 @@
 				
 				<label for="location"> Choose a store location</label>
 				<select name="location" id="location">
+					<option value="Amaroo"> Amaroo</option>
 					<option value="Belconnen"> Belconnen</option>
 					<option value="CBD"> CBD</option>
 					<option value="Casey"> Casey</option>
@@ -26,7 +27,7 @@
 					<option value="Cooma"> Cooma</option>
 					<option value="Goulburn"> Goulburn</option>
 					<option value="Gunghalin"> Gunghalin</option>
-					<option value="Kippax-Holt"> Kippax-Holt</option>
+					<option value="Jerrabomberra"> Jerrabomberra</option>
 					<option value="Kippax-Holt"> Kippax-Holt</option>
 					<option value="Maquarie"> Maquarie</option>
 					<option value="Majura Park"> Majura Park</option>
@@ -339,14 +340,13 @@
 				<textarea class="task-area-comment"	id="intcomments" name="Aldi management and staff comments" placeholder="Comments."></textarea>	
 			</fieldset>
 			
+			<a href="https://drive.google.com/drive/u/0/folders/1VRGc_GBR-rY_1ct76P8jdASzqSqf_Hmj" target="_blank"> Please create a new folder for this inspection and upload associated images there.</a>
+			
 			<input type="button" onclick="submit_form()" value="Submit inspection">
-			<input type="submit" id='subbtn' style="display: none;">
 			
-			
-			
+			<input type="submit" id='subbtn' style="display: none;" onclick="">
+
 			<input type="datetime-local" name="form_end" id="form_end" style="display: none;">
-
-
 		</form>
 		<script>
 		  
@@ -377,7 +377,7 @@
 			e.preventDefault()
 			
 			fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-				.then(response => console.log('Success!', response))
+				.then(response => location.href = 'submission.html') // takes to the submission page. 
 				.catch(error => console.error('Error!', error.message))
 			})
 
@@ -392,7 +392,7 @@
 
 					// Handles doc submission and form reset
 					document.getElementById('subbtn').click();
-					document.forms['submit-to-google-sheet'].reset();
+					//document.forms['submit-to-google-sheet'].reset();
 				} 
 			}
 		</script>
