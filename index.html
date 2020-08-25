@@ -347,9 +347,15 @@
 			<input type="submit" id='subbtn' style="display: none;" onclick="">
 
 			<input type="datetime-local" name="form_end" id="form_end" style="display: none;">
+
+
+			<!-- going to use cookies to handle the forming of the report-->
 		</form>
 		<script>
-		  
+			
+			// Set storage
+			myStorage = window.localStorage;
+
 			// Sets start date
 			var now = new Date();
 			now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
@@ -390,10 +396,17 @@
 					now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
 					document.getElementById('form_end').value = now.toISOString().slice(0,16);
 
+					store_value();
+
 					// Handles doc submission and form reset
 					document.getElementById('subbtn').click();
 					//document.forms['submit-to-google-sheet'].reset();
 				} 
+			}
+
+			function store_value(){
+				store_name = document.getElementById('location').value;
+				localStorage.setItem('StoreLocation', store_name); 
 			}
 		</script>
 	</body>

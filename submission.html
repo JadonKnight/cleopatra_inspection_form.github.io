@@ -8,6 +8,16 @@
 <body>
     Form Submitted Successfully. 
     <br>
+    <div id="test"> This is a test div. </div>
+    <br>
     <a href="index.html"> Submit another form.</a>
 </body>
+<script> 
+
+// allows the reading of local storage to read the form data. 
+document.getElementById('test').textContent = localStorage.getItem('StoreLocation') 
+
+// Need to call this after everything so that we don't fill up the local storage field. 
+localStorage.clear(); 
+</script>
 </html>
