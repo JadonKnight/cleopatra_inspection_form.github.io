@@ -35,6 +35,9 @@
         var confirmation = confirm("Do you want to submit another image?");
         if (confirmation) {
             setTimeout(function() { window.location.reload(); }, 1000);
+        } else{
+            // go to report
+            console.log("Last stage");
         }
     };
     </script>

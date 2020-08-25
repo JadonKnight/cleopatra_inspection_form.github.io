@@ -13,8 +13,8 @@
 			<fieldset>
 				<legend> Inspection Information</legend>
 				<input id="email" name="email" type="email" placeholder="Email Address" required>
-				<input name="firstName" type="text" placeholder="First Name" required>
-				<input name="lastName" type="text" placeholder="Last Name" required>
+				<input name="firstName" type="text" placeholder="First Name" required id="firstName">
+				<input name="lastName" type="text" placeholder="Last Name" required id="lastName">
 				
 				<label for="location"> Choose a store location</label>
 				<select name="location" id="location">
@@ -340,8 +340,6 @@
 				<textarea class="task-area-comment"	id="intcomments" name="Aldi management and staff comments" placeholder="Comments."></textarea>	
 			</fieldset>
 			
-			<a href="https://drive.google.com/drive/u/0/folders/1VRGc_GBR-rY_1ct76P8jdASzqSqf_Hmj" target="_blank"> Please create a new folder for this inspection and upload associated images there.</a>
-			
 			<input type="button" onclick="submit_form()" value="Submit inspection">
 			
 			<input type="submit" id='subbtn' style="display: none;" onclick="">
@@ -395,18 +393,28 @@
 					var now = new Date();
 					now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
 					document.getElementById('form_end').value = now.toISOString().slice(0,16);
+					set_report_data()
 
-					store_value();
 
 					// Handles doc submission and form reset
 					document.getElementById('subbtn').click();
-					//document.forms['submit-to-google-sheet'].reset();
+					document.forms['submit-to-google-sheet'].reset();
 				} 
 			}
 
-			function store_value(){
-				store_name = document.getElementById('location').value;
-				localStorage.setItem('StoreLocation', store_name); 
+			function set_report_data(){
+				// This is hacked badly but I don't know a good solution at the current moment. Will fix it when I do the full re-write in flask. 
+
+				var task_ids = ["Trolley bay and surrounding floor area", "BabySeats", "Metalrailing", "Bins", "Liquor glass and perspex", "Liquor block stainless bumper", "Airlock windows", "Cobwebs", "Entry mat", 
+				"Chiller perspex", "Milk chiller price stripping", "Metal grates", "Stainless bumpers", "Hard surfaces and splash back", "Kitchen floor", "Fridge, cupboards, and microwave", "Bathroom sink and mirror",
+				"Toilet", "Bathroom floor", "Lobby mirror and door stainless", "Lobby floor", "Loading dock area", "Bin area", "Drain channels", "Compactor chute", "Internal drain", "Back of house"];
+
+				for ( var i = 0; i< task_ids.length; i++){
+					value = document.getElementById(task_ids[i]).value;
+					localStorage.setItem(task_ids[i], value); 
+				}
+
+				console.log("done");
 			}
 		</script>
 	</body>
