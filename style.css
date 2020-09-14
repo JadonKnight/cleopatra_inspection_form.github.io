@@ -27,3 +27,15 @@ textarea {
     width: 500px;
     height: 50px;
 }
+
+th {
+    text-align: left;
+}
+
+.score{
+    text-align: right;
+}
+
+#main_logo{
+    float: right;
+}

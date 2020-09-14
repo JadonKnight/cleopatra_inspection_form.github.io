@@ -4,66 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inspection Report</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div>
+        <img src="logo.jpg" alt="Cleopatra Logo" id="main_logo">
+        <h1><u>Aldi Store Review</u></h1>
+        <p><b> StoreName:</b> <span id="store_name"></span></p>
+        <p><b>Date of Review: </b><span id="review_date"></span></p>
+        <p><b>Cleaner: </b><span id="cleaner_name"></span></p>
+        
+
+    </div>
     <hr>
     <div id="Section1">
         <h4>
-            Trolley bay & external entry/exit area
+            <u>Trolley bay & external entry/exit area </u>
         </h4>
         <table style="width: 100%;">
             <tr>
-                <th>Task</th>
-                <th>Score</th>
+                <th>Tasks</th>
+                <th class="score">Score</th>
             </tr>
             <tr>
                 <td>Trolley bay and surrounding area floor</td> 
-                <td>3</td> 
+                <td class="score" id="Trolley bay and surrounding floor area">3</td> 
             </tr>
             <tr>
                 <td>Baby seats</td> 
-                <td>3</td> 
+                <td class="score" id="BabySeats">3</td> 
             </tr>
             <tr>
                 <td>Metal railing</td> 
-                <td>3</td> 
+                <td class="score" id="Metalrailing">3</td> 
             </tr>
             <tr>
                 <td>Bins</td> 
-                <td>3</td> 
+                <td class="score" id="Bins">3</td> 
             </tr>
         </table>
+        <p><b>Comments:</b></p>
+        <p id="sec1_comments"></p>
     </div>
     <hr>
     <div id="Section2">
         <h4>
-            Internal entry/exit area
+            <u>Internal entry/exit area</u> 
         </h4>
         <table style="width: 100%;">
             <tr>
-                <th>Task</th>
-                <th>Score</th>
+                <th>Tasks</th>
+                <th class="score">Score</th>
             </tr>
-            
+            <tr>
+                <td> Liquor block glass and perspex</td>
+                <td class="score" id="Liquor glass and perspex"> 3 </td>
+            </tr>
+            <tr>
+                <td> Liquor block stainless bumper</td>
+                <td class="score" id="Liquor block stainless bumper">3 </td>
+            </tr>
+            <tr>
+                <td> Airlock windows</td>
+                <td class="score" id="Airlock windows">3 </td>
+            </tr>
+            <tr>
+                <td> Cobwebs</td>
+                <td class="score" id="Cobwebs">3 </td>
+            </tr>
+            <tr>
+                <td> Entry mat</td>
+                <td class="score" id="Entry mat">3 </td>
+            </tr>
+        </table>
+        <p><b>Comments:</b></p>
+        <p id="sec2_comments"></p>
     </div>
     <hr>
     <div id="Section3">
         <h4>
-            Chiller
+            <u>Chiller</u>
         </h4>
+        <table style="width: 100%;">
+            <tr>
+                <th>Tasks</th>
+                <th class="score">Score</th>
+            </tr>
+            <tr>
+                <td> Chiller perspex</td>
+                <td class="score" id="Chiller perspex"> 3 </td>
+            </tr>
+            <tr>
+                <td> Milk chiller price stripping</td>
+                <td class="score" id="Milk chiller price stripping">3 </td>
+            </tr>
+            <tr>
+                <td> Metal grates</td>
+                <td class="score" id="Metal grates">3 </td>
+            </tr>
+            <tr>
+                <td> Stainless bumper</td>
+                <td class="score" id="Stainless bumpers">3 </td>
+            </tr>
+        </table>
+        <p><b>Comments:</b></p>
+        <p id="sec3_comments"></p>
     </div>
     <hr>
     <div id="Section4">
         <h4>
-            Staff amenities
+            <u>Staff amenities</u>
         </h4>
+        <table style="width: 100%;">
+            <tr>
+                <th>Tasks</th>
+                <th class="score">Score</th>
+            </tr>
+            <tr>
+                <td> Hard surfaces and splash back</td>
+                <td class="score" id="Hard surfaces and splash back"> 3 </td>
+            </tr>
+            <tr>
+                <td> Kitchen floor</td>
+                <td class="score" id="Kitchen floor">3 </td>
+            </tr>
+            <tr>
+                <td> Fridge, cupboards, and microwave</td>
+                <td class="score" id="Fridge, cupboards, and microwave">3 </td>
+            </tr>
+            <tr>
+                <td> Bathroom sink and mirror</td>
+                <td class="score" id="Bathroom sink and mirror">3 </td>
+            </tr>
+            <tr>
+                <td> Toilet</td>
+                <td class="score" id="Toilet">3 </td>
+            </tr>
+            <tr>
+                <td> Bathroom floor</td>
+                <td class="score" id="Bathroom floor">3 </td>
+            </tr>
+            <tr>
+                <td> Lobby mirror and door stainless</td>
+                <td class="score" id="Lobby mirror and door stainless">3 </td>
+            </tr>
+            <tr>
+                <td> Lobby floor</td>
+                <td class="score" id="Lobby floor">3 </td>
+            </tr>
+        </table>
+        <p><b>Comments:</b></p>
+        <p id="sec4_comments"></p>
     </div>
     <hr>
     <div id="Section5">
         <h4>
-            Loading dock and drain
+           <u>Loading dock and drain</u> 
         </h4>
+        <table style="width: 100%;">
+            <tr>
+                <th>Tasks</th>
+                <th class="score">Score</th>
+            </tr>
+            <tr>
+                <td> Loading dock area</td>
+                <td class="score" id="Loading dock area"> 3 </td>
+            </tr>
+            <tr>
+                <td>Bin area</td>
+                <td class="score" id="Bin area">3 </td>
+            </tr>
+            <tr>
+                <td> Drain channels</td>
+                <td class="score" id="Drain channels">3 </td>
+            </tr>
+            <tr>
+                <td> Compactor chute</td>
+                <td class="score" id="Compactor chute">3 </td>
+            </tr>
+            <tr>
+                <td> Internal drain</td>
+                <td class="score" id="Internal drain">3 </td>
+            </tr>
+            <tr>
+                <td> Back of house</td>
+                <td class="score" id="Back of house">3 </td>
+            </tr>
+        </table>
+        <p><b>Comments:</b></p>
+        <p id="sec5_comments"></p>
     </div>
     <hr>
+    <div id="Total Score">
+        <h4>
+           <u>Total Score</u> 
+        </h4>
+        <table style="width: 100%;">
+            <tr>
+                <td> Assement Score % </td>
+                <td class="score" id="ass_score"> 0 </td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <p> <b>Review completed by:</b> <span id="reviewee_name"></span></p>
+<script>
+    // Hold the cleaners scores and max possible scores. 
+    var cleaners_score = 0;
+    var max_score = 0; 
+    function get_report_data(){
+                // This is hacked badly but I don't know a good solution at the current moment. Will fix it when I do the full re-write in flask. 
+
+                var task_ids = ["Trolley bay and surrounding floor area", "BabySeats", "Metalrailing", "Bins", "Liquor glass and perspex", "Liquor block stainless bumper", "Airlock windows", "Cobwebs", "Entry mat", 
+                "Chiller perspex", "Milk chiller price stripping", "Metal grates", "Stainless bumpers", "Hard surfaces and splash back", "Kitchen floor", "Fridge, cupboards, and microwave", "Bathroom sink and mirror",
+                "Toilet", "Bathroom floor", "Lobby mirror and door stainless", "Lobby floor", "Loading dock area", "Bin area", "Drain channels", "Compactor chute", "Internal drain", "Back of house"];
+
+				var comment_ids = ["tbextcomments", "intcomments" ,"chillercomments", "amenitiescomments" ,"ldockcomments", "aldicomments"]; 
+
+                
+
+
+                // we can now use the same method to call all id's in the report convert their satisfactory score to a numerical
+                // score and then update the data form. 
+                for ( var i = 0; i< task_ids.length; i++){
+                    word_value = localStorage.getItem(task_ids[i]);
+                    var numerical_value; 
+                    // Switch statement to handle conversion
+                    switch(word_value){
+                        case 'Highly Satisfactory': 
+                            numerical_value = 4;
+                            cleaners_score += 4;  
+                            max_score += 4;
+                            break;
+                        case 'Satisfactory':
+                            numerical_value = 3;
+                            cleaners_score += 3;  
+                            max_score += 4;
+                            break;
+                        case 'Unsatisfactory':
+                            numerical_value = 2;
+                            cleaners_score += 2; 
+                            max_score += 4; 
+                            break;
+                        case 'Highly Unsatisfactory':
+                            numerical_value = 1;
+                            cleaners_score += 1;  
+                            max_score += 4;
+                            break;
+                        default:
+                        numerical_value = 0; 
+                    }
+                    document.getElementById(task_ids[i]).textContent = numerical_value;
+                }
+                document.getElementById("ass_score").textContent = Math.round(cleaners_score/max_score * 100);
+                document.getElementById("store_name").textContent = localStorage.getItem("location");
+                document.getElementById("review_date").textContent = localStorage.getItem('form_end');
+                document.getElementById("cleaner_name").textContent = localStorage.getItem("cleaner_name");
+                document.getElementById("reviewee_name").textContent = localStorage.getItem("firstName") + ' ' + localStorage.getItem("lastName");
+                document.getElementById("sec1_comments").textContent = localStorage.getItem(comment_ids[0])
+                document.getElementById("sec2_comments").textContent = localStorage.getItem(comment_ids[1])
+                document.getElementById("sec3_comments").textContent = localStorage.getItem(comment_ids[2])
+                document.getElementById("sec4_comments").textContent = localStorage.getItem(comment_ids[3])
+                document.getElementById("sec5_comments").textContent = localStorage.getItem(comment_ids[4])
+    }
+    get_report_data();
+    localStorage.clear();
+</script>
 </body>
 </html>

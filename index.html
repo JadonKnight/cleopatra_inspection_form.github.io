@@ -15,7 +15,9 @@
 				<input id="email" name="email" type="email" placeholder="Email Address" required>
 				<input name="firstName" type="text" placeholder="First Name" required id="firstName">
 				<input name="lastName" type="text" placeholder="Last Name" required id="lastName">
-				
+				<br>
+				<input name="cleanerName" type="text" placeholder="Store Cleaner Name" id="cleaner_name">
+				<br>
 				<label for="location"> Choose a store location</label>
 				<select name="location" id="location">
 					<option value="Amaroo"> Amaroo</option>
@@ -179,7 +181,7 @@
 						<option value="Not Applicable">Not Applicable</option>
 					</select>
 				</div>
-				<textarea class="task-area-comment"	id="intcomments" name="Chiller additional comments" placeholder="Additional comments."></textarea>	
+				<textarea class="task-area-comment"	id="chillercomments" name="Chiller additional comments" placeholder="Additional comments."></textarea>	
 			</fieldset>
 			<fieldset>
 				<legend class="task-area-heading"> Staff amenities </legend>
@@ -263,7 +265,7 @@
 						<option value="Not Applicable">Not Applicable</option>
 					</select>
 				</div>
-				<textarea class="task-area-comment"	id="intcomments" name="Staff amenities additional comments" placeholder="Additional comments."></textarea>	
+				<textarea class="task-area-comment"	id="amenitiescomments" name="Staff amenities additional comments" placeholder="Additional comments."></textarea>	
 			</fieldset>
 			<fieldset>
 				<legend class="task-area-heading"> Loading dock and drain </legend>
@@ -333,11 +335,11 @@
 				<input type="file" id="Back of house image" name="Back of house image" >
 				<br> -->
 
-				<textarea class="task-area-comment"	id="intcomments" name="Loading dock and drain additional comments" placeholder="Additional comments."></textarea>	
+				<textarea class="task-area-comment"	id="ldockcomments" name="Loading dock and drain additional comments" placeholder="Additional comments."></textarea>	
 			</fieldset>
 			<fieldset>
 				<legend class="task-area-heading"> Aldi management and staff comments </legend>
-				<textarea class="task-area-comment"	id="intcomments" name="Aldi management and staff comments" placeholder="Comments."></textarea>	
+				<textarea class="task-area-comment"	id="aldicomments" name="Aldi management and staff comments" placeholder="Comments."></textarea>	
 			</fieldset>
 			
 			<input type="button" onclick="submit_form()" value="Submit inspection">
@@ -393,6 +395,7 @@
 					var now = new Date();
 					now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
 					document.getElementById('form_end').value = now.toISOString().slice(0,16);
+					// Sets the data from the inspection form into local storage. 
 					set_report_data()
 
 
@@ -409,9 +412,14 @@
 				"Chiller perspex", "Milk chiller price stripping", "Metal grates", "Stainless bumpers", "Hard surfaces and splash back", "Kitchen floor", "Fridge, cupboards, and microwave", "Bathroom sink and mirror",
 				"Toilet", "Bathroom floor", "Lobby mirror and door stainless", "Lobby floor", "Loading dock area", "Bin area", "Drain channels", "Compactor chute", "Internal drain", "Back of house"];
 
+				var comment_ids = ["tbextcomments", "intcomments" ,"chillercomments", "amenitiescomments" ,"ldockcomments", "aldicomments", "location", "form_end", "cleaner_name", "firstName", "lastName"]; 
 				for ( var i = 0; i< task_ids.length; i++){
 					value = document.getElementById(task_ids[i]).value;
 					localStorage.setItem(task_ids[i], value); 
+				}
+				for ( var i = 0; i< comment_ids.length; i++){
+					content = document.getElementById(comment_ids[i]).value;
+					localStorage.setItem(comment_ids[i], content); 
 				}
 
 				console.log("done");
