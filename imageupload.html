@@ -13,7 +13,6 @@
         <div id="data"></div>
         <input name="file" id="uploadfile" type="file">
         <input id="submit" type="submit">
-        
     </form>
     </div>
     <script>
@@ -37,10 +36,10 @@
         // hacked but works.
         var confirmation = confirm("Do you want to submit another image?");
         if (confirmation) {
-            setTimeout(function() { window.location.reload(); }, 1000);
+            setTimeout(function() { window.location.reload(); }, 4000);
         } else{
             // go to report
-            setTimeout(function() { window.location.href = "submission.html"; }, 1000);
+            setTimeout(function() { window.location.href = "submission.html"; }, 4000);
         }
     };
     </script>
