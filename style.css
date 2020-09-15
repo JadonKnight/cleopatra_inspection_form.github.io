@@ -7,13 +7,8 @@ input[type="radio"] {
     vertical-align: middle;
 }
 
-/* .task-area-heading{
-    text-decoration: underline;
-} */
-
 .task-heading{
     font-weight: bold;
-    text-decoration: underline;
 }
 
 #backhouseimg {
@@ -26,4 +21,100 @@ textarea {
 .task-area-comment{
     width: 500px;
     height: 50px;
+}
+
+th {
+    text-align: left;
+}
+
+.score{
+    text-align: right;
+}
+
+#main_logo{
+    float: right;
+}
+
+#inner_element{
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px; 
+}
+
+body{
+    background-color: #3385ff;
+}
+
+#inner_form_element{
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+
+}
+
+fieldset{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*padding: 0% 20%;
+    */  
+}
+
+header#form_header{
+    background-color: #3385ff;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+
+legend{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+input{
+    margin-bottom: 1px;
+    margin-right: 1px;
+}
+
+#submission_element{
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    text-align: center;
+}
+
+.link_button{
+    width: 200px;
+    text-align: center;
+
+}
+
+.form_task_wrapper{
+    padding: 4px 4px 0 0;
+}
+
+.task{
+    padding: 4px 4px 0 0; 
 }

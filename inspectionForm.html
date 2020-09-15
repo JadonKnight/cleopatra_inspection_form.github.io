@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Inspection Form </title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+	</head>
+	<body>
+		<div id="inner_form_element">	
+			<h1 style="text-align: center;"> <u>Cleopatra Inspection Form </u> </h1>
+			<form name="submit-to-google-sheet" enctype="multipart/form-data" >
+				<input type="datetime-local" name="form_begining" id="form_begining" style="display: none;" >
+				<fieldset>
+					<legend> Inspection Information</legend>
+					<input id="email" name="email" type="email" placeholder="Email Address" required>
+					<input name="firstName" type="text" placeholder="First Name" required id="firstName">
+					<input name="lastName" type="text" placeholder="Last Name" required id="lastName">
+					<br>
+					<input name="cleanerName" type="text" placeholder="Store Cleaner Name" id="cleaner_name">
+					<br>
+					<div class="form_task_wrapper">
+					<label for="location"> Choose a store location</label>
+					<select name="location" id="location">
+						<option value="Amaroo"> Amaroo</option>
+						<option value="Belconnen"> Belconnen</option>
+						<option value="CBD"> CBD</option>
+						<option value="Casey"> Casey</option>
+						<option value="Chisholm"> Chisholm</option>
+						<option value="Conder"> Conder</option>
+						<option value="Cooma"> Cooma</option>
+						<option value="Goulburn"> Goulburn</option>
+						<option value="Gunghalin"> Gunghalin</option>
+						<option value="Jerrabomberra"> Jerrabomberra</option>
+						<option value="Kippax-Holt"> Kippax-Holt</option>
+						<option value="Maquarie"> Maquarie</option>
+						<option value="Majura Park"> Majura Park</option>
+						<option value="Queanbeyan"> Queanbeyan</option>
+						<option value="Tuggeranong"> Tuggeranong</option>
+						<option value="Weston"> Weston</option>
+						<option value="Yass"> Yass</option>
+					</select>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend class="task-area-heading"> Trolley bay & external entry/exit area</legend>
+					<div class="task" id="tbfloor">
+						<span class="task-heading"> Trolley bay and surrounding area floor: </span>
+						<select name="Trolley bay and surrounding floor area" id="Trolley bay and surrounding floor area">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="tbbseats">
+						<span class="task-heading"> Baby seats: </span>
+						<select name="BabySeats" id="BabySeats">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="tbmetalrailing">
+						<span class="task-heading"> Metal railing: </span>
+						<select name="Metalrailing" id="Metalrailing">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="tbbins">
+						<span class="task-heading"> Bins: </span>
+						<select name="Bins" id="Bins">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<br>
+					<textarea class="task-area-comment"	id="tbextcomments" name="Trolley bay & external additional comments" placeholder="Additional comments."></textarea>	
+				</fieldset>
+
+				<fieldset>
+					<legend class="task-area-heading"> Internal entry/exit area</legend>
+					<div class="task" id="intLBglass">
+						<span class="task-heading"> Liquor block glass and perspex: </span>
+						<select name="Liquor glass and perspex" id="Liquor glass and perspex">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="intLBbumper">
+						<span class="task-heading"> Liquor block stainless bumper: </span>
+						<select name="Liquor block stainless bumper" id="Liquor block stainless bumper">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="airlockwin">
+						<span class="task-heading"> Airlock windows: </span>
+						<select name="Airlock windows" id="Airlock windows">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="cobwebs">
+						<span class="task-heading"> Cobwebs: </span>
+						<select name="Cobwebs" id="Cobwebs">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="entrymat">
+						<span class="task-heading"> Entry mat: </span>
+						<select name="Entry mat" id="Entry mat">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<br>
+					<textarea class="task-area-comment"	id="intcomments" name="Internal entry/exit additional comments" placeholder="Additional comments."></textarea>	
+				</fieldset>
+				<fieldset>
+					<legend class="task-area-heading"> Chiller</legend>
+					<div class="task" id="Cperspex">
+						<span class="task-heading"> Chiller perspex: </span>
+						<select name="Chiller perspex" id="Chiller perspex">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="Cmilkstrip">
+						<span class="task-heading"> Milk chiller price stripping: </span>
+						<select name="Milk chiller price stripping" id="Milk chiller price stripping">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="Cgrates">
+						<span class="task-heading"> Metal grates: </span>
+						<select name="Metal grates" id="Metal grates">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="Cbumpers">
+						<span class="task-heading"> Stainless bumpers: </span>
+						<select name="Stainless bumpers" id="Stainless bumpers">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<br>
+					<textarea class="task-area-comment"	id="chillercomments" name="Chiller additional comments" placeholder="Additional comments."></textarea>	
+				</fieldset>
+				<fieldset>
+					<legend class="task-area-heading"> Staff amenities </legend>
+					<div class="task" id="SAsurfaces">
+						<span class="task-heading"> Hard surfaces and splash back: </span>
+						<select name="Hard surfaces and splash back" id="Hard surfaces and splash back">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="SAfloor">
+						<span class="task-heading"> Kitchen floor: </span>
+						<select name="Kitchen floor" id="Kitchen floor">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="SAcupboards">
+						<span class="task-heading"> Fridge, cupboards, and microwave: </span>
+						<select name="Fridge, cupboards, and microwave" id="Fridge, cupboards, and microwave">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="SAbrsinkmirror">
+						<span class="task-heading"> Bathroom sink and mirror: </span>
+						<select name="Bathroom sink and mirror" id="Bathroom sink and mirror">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="SAbrtoilet">
+						<span class="task-heading"> Toilet: </span>
+						<select name="Toilet" id="Toilet">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>	
+					</div>
+					<div class="task" id="SAbrfloor">
+						<span class="task-heading"> Bathroom floor: </span>
+						<select name="Bathroom floor" id="Bathroom floor">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="SAlobmirr">
+						<span class="task-heading"> Lobby mirror and door stainless: </span>
+						<select name="Lobby mirror and door stainless" id="Lobby mirror and door stainless">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="SAlobflr">
+						<span class="task-heading"> Lobby floor: </span>
+						<select name="Lobby floor" id="Lobby floor">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<br>
+					<textarea class="task-area-comment"	id="amenitiescomments" name="Staff amenities additional comments" placeholder="Additional comments."></textarea>	
+				</fieldset>
+				<fieldset>
+					<legend class="task-area-heading"> Loading dock and drain </legend>
+					<div class="task" id="loadingdkarea">
+						<span class="task-heading"> Loading dock area: </span>
+						<select name="Loading dock area" id="Loading dock area">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="loadingdkbin">
+						<span class="task-heading"> Bin area: </span>
+						<select name="Bin area" id="Bin area">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="loadingdkdrain">
+						<span class="task-heading"> Drain channels: </span>
+						<select name="Drain channels" id="Drain channels">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="loadingdkchute">
+						<span class="task-heading"> Compactor chute: </span>
+						<select name="Compactor chute" id="Compactor chute">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="loadingdkintdrain">
+						<span class="task-heading"> Internal drain: </span>
+						<select name="Internal drain" id="Internal drain">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<div class="task" id="loadingdkbkhouse">
+						<span class="task-heading"> Back of house: </span>
+						<select name="Back of house" id="Back of house">
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+							<option value="Not Applicable">Not Applicable</option>
+						</select>
+					</div>
+					<br>
+					<textarea class="task-area-comment"	id="ldockcomments" name="Loading dock and drain additional comments" placeholder="Additional comments."></textarea>	
+				</fieldset>
+				<fieldset>
+					<legend class="task-area-heading"> Aldi management and staff comments </legend>
+					<textarea class="task-area-comment"	id="aldicomments" name="Aldi management and staff comments" placeholder="Comments."></textarea>	
+				</fieldset>
+				
+				<input type="button" onclick="submit_form()" value="Submit inspection">
+				
+				<input type="submit" id='subbtn' style="display: none;" onclick="">
+
+				<input type="datetime-local" name="form_end" id="form_end" style="display: none;">
+
+
+				<!-- going to use cookies to handle the forming of the report-->
+			</form>
+		</div>
+		<script>
+			
+			// Set storage
+			myStorage = window.localStorage;
+
+			// Sets start date
+			var now = new Date();
+			now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+			document.getElementById('form_begining').value = now.toISOString().slice(0,16);
+
+			// File handling script
+			$('#uploadfile').on("change", function() {
+			var file = this.files[0];
+			var fr = new FileReader();
+			fr.fileName = file.name
+			fr.onload = function(e) {
+				e.target.result
+				html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+				html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+				html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+				$("#data").empty().append(html);
+			}
+			fr.readAsDataURL(file);
+			});
+			
+			
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbwwJzFE-Q9roiY7kv3N6awa94pjjoFE6Wb5roF6V4GKNKpe_B81/exec'
+			const form = document.forms['submit-to-google-sheet']
+			form.addEventListener('submit', e => {
+			e.preventDefault()
+			
+			fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => location.href = 'submission.html') // takes to the submission page. 
+				.catch(error => console.error('Error!', error.message))
+			})
+
+
+			function submit_form(){
+				const confirmation = confirm("Are you sure you wish to submit the inspection?");
+				if (confirmation) {
+					// sets submission time values
+					var now = new Date();
+					now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+					document.getElementById('form_end').value = now.toISOString().slice(0,16);
+					// Sets the data from the inspection form into local storage. 
+					set_report_data()
+
+
+					// Handles doc submission and form reset
+					document.getElementById('subbtn').click();
+					document.forms['submit-to-google-sheet'].reset();
+				} 
+			}
+
+			function set_report_data(){
+				// This is hacked badly but I don't know a good solution at the current moment. Will fix it when I do the full re-write in flask. 
+
+				var task_ids = ["Trolley bay and surrounding floor area", "BabySeats", "Metalrailing", "Bins", "Liquor glass and perspex", "Liquor block stainless bumper", "Airlock windows", "Cobwebs", "Entry mat", 
+				"Chiller perspex", "Milk chiller price stripping", "Metal grates", "Stainless bumpers", "Hard surfaces and splash back", "Kitchen floor", "Fridge, cupboards, and microwave", "Bathroom sink and mirror",
+				"Toilet", "Bathroom floor", "Lobby mirror and door stainless", "Lobby floor", "Loading dock area", "Bin area", "Drain channels", "Compactor chute", "Internal drain", "Back of house"];
+
+				var comment_ids = ["tbextcomments", "intcomments" ,"chillercomments", "amenitiescomments" ,"ldockcomments", "aldicomments", "location", "form_end", "cleaner_name", "firstName", "lastName"]; 
+				for ( var i = 0; i< task_ids.length; i++){
+					value = document.getElementById(task_ids[i]).value;
+					localStorage.setItem(task_ids[i], value); 
+				}
+				for ( var i = 0; i< comment_ids.length; i++){
+					content = document.getElementById(comment_ids[i]).value;
+					localStorage.setItem(comment_ids[i], content); 
+				}
+
+				console.log("done");
+			}
+		</script>
+	</body>
+</html>
