@@ -6,208 +6,210 @@
     <title>Inspection Report</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div>
-        <img src="logo.jpg" alt="Cleopatra Logo" id="main_logo">
-        <h1><u>Aldi Store Review</u></h1>
-        <p><b> StoreName:</b> <span id="store_name"></span></p>
-        <p><b>Date of Review: </b><span id="review_date"></span></p>
-        <p><b>Cleaner: </b><span id="cleaner_name"></span></p>
-        
+<body id="report">
+    <div id="inner_element">
+        <div>
+            <img src="logo.jpg" alt="Cleopatra Logo" id="main_logo">
+            <h1><u>Aldi Store Review</u></h1>
+            <p><b> StoreName:</b> <span id="store_name"></span></p>
+            <p><b>Date of Review: </b><span id="review_date"></span></p>
+            <p><b>Cleaner: </b><span id="cleaner_name"></span></p>
+            
 
-    </div>
-    <hr>
-    <div id="Section1">
-        <h4>
-            <u>Trolley bay & external entry/exit area </u>
-        </h4>
-        <table style="width: 100%;">
-            <tr>
-                <th>Tasks</th>
-                <th class="score">Score</th>
-            </tr>
-            <tr>
-                <td>Trolley bay and surrounding area floor</td> 
-                <td class="score" id="Trolley bay and surrounding floor area">3</td> 
-            </tr>
-            <tr>
-                <td>Baby seats</td> 
-                <td class="score" id="BabySeats">3</td> 
-            </tr>
-            <tr>
-                <td>Metal railing</td> 
-                <td class="score" id="Metalrailing">3</td> 
-            </tr>
-            <tr>
-                <td>Bins</td> 
-                <td class="score" id="Bins">3</td> 
-            </tr>
-        </table>
-        <p><b>Comments:</b></p>
-        <p id="sec1_comments"></p>
-    </div>
-    <hr>
-    <div id="Section2">
-        <h4>
-            <u>Internal entry/exit area</u> 
-        </h4>
-        <table style="width: 100%;">
-            <tr>
-                <th>Tasks</th>
-                <th class="score">Score</th>
-            </tr>
-            <tr>
-                <td> Liquor block glass and perspex</td>
-                <td class="score" id="Liquor glass and perspex"> 3 </td>
-            </tr>
-            <tr>
-                <td> Liquor block stainless bumper</td>
-                <td class="score" id="Liquor block stainless bumper">3 </td>
-            </tr>
-            <tr>
-                <td> Airlock windows</td>
-                <td class="score" id="Airlock windows">3 </td>
-            </tr>
-            <tr>
-                <td> Cobwebs</td>
-                <td class="score" id="Cobwebs">3 </td>
-            </tr>
-            <tr>
-                <td> Entry mat</td>
-                <td class="score" id="Entry mat">3 </td>
-            </tr>
-        </table>
-        <p><b>Comments:</b></p>
-        <p id="sec2_comments"></p>
-    </div>
-    <hr>
-    <div id="Section3">
-        <h4>
-            <u>Chiller</u>
-        </h4>
-        <table style="width: 100%;">
-            <tr>
-                <th>Tasks</th>
-                <th class="score">Score</th>
-            </tr>
-            <tr>
-                <td> Chiller perspex</td>
-                <td class="score" id="Chiller perspex"> 3 </td>
-            </tr>
-            <tr>
-                <td> Milk chiller price stripping</td>
-                <td class="score" id="Milk chiller price stripping">3 </td>
-            </tr>
-            <tr>
-                <td> Metal grates</td>
-                <td class="score" id="Metal grates">3 </td>
-            </tr>
-            <tr>
-                <td> Stainless bumper</td>
-                <td class="score" id="Stainless bumpers">3 </td>
-            </tr>
-        </table>
-        <p><b>Comments:</b></p>
-        <p id="sec3_comments"></p>
-    </div>
-    <hr>
-    <div id="Section4">
-        <h4>
-            <u>Staff amenities</u>
-        </h4>
-        <table style="width: 100%;">
-            <tr>
-                <th>Tasks</th>
-                <th class="score">Score</th>
-            </tr>
-            <tr>
-                <td> Hard surfaces and splash back</td>
-                <td class="score" id="Hard surfaces and splash back"> 3 </td>
-            </tr>
-            <tr>
-                <td> Kitchen floor</td>
-                <td class="score" id="Kitchen floor">3 </td>
-            </tr>
-            <tr>
-                <td> Fridge, cupboards, and microwave</td>
-                <td class="score" id="Fridge, cupboards, and microwave">3 </td>
-            </tr>
-            <tr>
-                <td> Bathroom sink and mirror</td>
-                <td class="score" id="Bathroom sink and mirror">3 </td>
-            </tr>
-            <tr>
-                <td> Toilet</td>
-                <td class="score" id="Toilet">3 </td>
-            </tr>
-            <tr>
-                <td> Bathroom floor</td>
-                <td class="score" id="Bathroom floor">3 </td>
-            </tr>
-            <tr>
-                <td> Lobby mirror and door stainless</td>
-                <td class="score" id="Lobby mirror and door stainless">3 </td>
-            </tr>
-            <tr>
-                <td> Lobby floor</td>
-                <td class="score" id="Lobby floor">3 </td>
-            </tr>
-        </table>
-        <p><b>Comments:</b></p>
-        <p id="sec4_comments"></p>
-    </div>
-    <hr>
-    <div id="Section5">
-        <h4>
-           <u>Loading dock and drain</u> 
-        </h4>
-        <table style="width: 100%;">
-            <tr>
-                <th>Tasks</th>
-                <th class="score">Score</th>
-            </tr>
-            <tr>
-                <td> Loading dock area</td>
-                <td class="score" id="Loading dock area"> 3 </td>
-            </tr>
-            <tr>
-                <td>Bin area</td>
-                <td class="score" id="Bin area">3 </td>
-            </tr>
-            <tr>
-                <td> Drain channels</td>
-                <td class="score" id="Drain channels">3 </td>
-            </tr>
-            <tr>
-                <td> Compactor chute</td>
-                <td class="score" id="Compactor chute">3 </td>
-            </tr>
-            <tr>
-                <td> Internal drain</td>
-                <td class="score" id="Internal drain">3 </td>
-            </tr>
-            <tr>
-                <td> Back of house</td>
-                <td class="score" id="Back of house">3 </td>
-            </tr>
-        </table>
-        <p><b>Comments:</b></p>
-        <p id="sec5_comments"></p>
-    </div>
-    <hr>
-    <div id="Total Score">
-        <h4>
-           <u>Total Score</u> 
-        </h4>
-        <table style="width: 100%;">
-            <tr>
-                <td> Assement Score % </td>
-                <td class="score" id="ass_score"> 0 </td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <p> <b>Review completed by:</b> <span id="reviewee_name"></span></p>
+        </div>
+        <hr>
+        <div id="Section1">
+            <h4>
+                <u>Trolley bay & external entry/exit area </u>
+            </h4>
+            <table style="width: 100%;">
+                <tr>
+                    <th>Tasks</th>
+                    <th class="score">Score</th>
+                </tr>
+                <tr>
+                    <td>Trolley bay and surrounding area floor</td> 
+                    <td class="score" id="Trolley bay and surrounding floor area">3</td> 
+                </tr>
+                <tr>
+                    <td>Baby seats</td> 
+                    <td class="score" id="BabySeats">3</td> 
+                </tr>
+                <tr>
+                    <td>Metal railing</td> 
+                    <td class="score" id="Metalrailing">3</td> 
+                </tr>
+                <tr>
+                    <td>Bins</td> 
+                    <td class="score" id="Bins">3</td> 
+                </tr>
+            </table>
+            <p><b>Comments:</b></p>
+            <p id="sec1_comments"></p>
+        </div>
+        <hr>
+        <div id="Section2">
+            <h4>
+                <u>Internal entry/exit area</u> 
+            </h4>
+            <table style="width: 100%;">
+                <tr>
+                    <th>Tasks</th>
+                    <th class="score">Score</th>
+                </tr>
+                <tr>
+                    <td> Liquor block glass and perspex</td>
+                    <td class="score" id="Liquor glass and perspex"> 3 </td>
+                </tr>
+                <tr>
+                    <td> Liquor block stainless bumper</td>
+                    <td class="score" id="Liquor block stainless bumper">3 </td>
+                </tr>
+                <tr>
+                    <td> Airlock windows</td>
+                    <td class="score" id="Airlock windows">3 </td>
+                </tr>
+                <tr>
+                    <td> Cobwebs</td>
+                    <td class="score" id="Cobwebs">3 </td>
+                </tr>
+                <tr>
+                    <td> Entry mat</td>
+                    <td class="score" id="Entry mat">3 </td>
+                </tr>
+            </table>
+            <p><b>Comments:</b></p>
+            <p id="sec2_comments"></p>
+        </div>
+        <hr>
+        <div id="Section3">
+            <h4>
+                <u>Chiller</u>
+            </h4>
+            <table style="width: 100%;">
+                <tr>
+                    <th>Tasks</th>
+                    <th class="score">Score</th>
+                </tr>
+                <tr>
+                    <td> Chiller perspex</td>
+                    <td class="score" id="Chiller perspex"> 3 </td>
+                </tr>
+                <tr>
+                    <td> Milk chiller price stripping</td>
+                    <td class="score" id="Milk chiller price stripping">3 </td>
+                </tr>
+                <tr>
+                    <td> Metal grates</td>
+                    <td class="score" id="Metal grates">3 </td>
+                </tr>
+                <tr>
+                    <td> Stainless bumper</td>
+                    <td class="score" id="Stainless bumpers">3 </td>
+                </tr>
+            </table>
+            <p><b>Comments:</b></p>
+            <p id="sec3_comments"></p>
+        </div>
+        <hr>
+        <div id="Section4">
+            <h4>
+                <u>Staff amenities</u>
+            </h4>
+            <table style="width: 100%;">
+                <tr>
+                    <th>Tasks</th>
+                    <th class="score">Score</th>
+                </tr>
+                <tr>
+                    <td> Hard surfaces and splash back</td>
+                    <td class="score" id="Hard surfaces and splash back"> 3 </td>
+                </tr>
+                <tr>
+                    <td> Kitchen floor</td>
+                    <td class="score" id="Kitchen floor">3 </td>
+                </tr>
+                <tr>
+                    <td> Fridge, cupboards, and microwave</td>
+                    <td class="score" id="Fridge, cupboards, and microwave">3 </td>
+                </tr>
+                <tr>
+                    <td> Bathroom sink and mirror</td>
+                    <td class="score" id="Bathroom sink and mirror">3 </td>
+                </tr>
+                <tr>
+                    <td> Toilet</td>
+                    <td class="score" id="Toilet">3 </td>
+                </tr>
+                <tr>
+                    <td> Bathroom floor</td>
+                    <td class="score" id="Bathroom floor">3 </td>
+                </tr>
+                <tr>
+                    <td> Lobby mirror and door stainless</td>
+                    <td class="score" id="Lobby mirror and door stainless">3 </td>
+                </tr>
+                <tr>
+                    <td> Lobby floor</td>
+                    <td class="score" id="Lobby floor">3 </td>
+                </tr>
+            </table>
+            <p><b>Comments:</b></p>
+            <p id="sec4_comments"></p>
+        </div>
+        <hr>
+        <div id="Section5">
+            <h4>
+            <u>Loading dock and drain</u> 
+            </h4>
+            <table style="width: 100%;">
+                <tr>
+                    <th>Tasks</th>
+                    <th class="score">Score</th>
+                </tr>
+                <tr>
+                    <td> Loading dock area</td>
+                    <td class="score" id="Loading dock area"> 3 </td>
+                </tr>
+                <tr>
+                    <td>Bin area</td>
+                    <td class="score" id="Bin area">3 </td>
+                </tr>
+                <tr>
+                    <td> Drain channels</td>
+                    <td class="score" id="Drain channels">3 </td>
+                </tr>
+                <tr>
+                    <td> Compactor chute</td>
+                    <td class="score" id="Compactor chute">3 </td>
+                </tr>
+                <tr>
+                    <td> Internal drain</td>
+                    <td class="score" id="Internal drain">3 </td>
+                </tr>
+                <tr>
+                    <td> Back of house</td>
+                    <td class="score" id="Back of house">3 </td>
+                </tr>
+            </table>
+            <p><b>Comments:</b></p>
+            <p id="sec5_comments"></p>
+        </div>
+        <hr>
+        <div id="Total Score">
+            <h4>
+            <u>Total Score</u> 
+            </h4>
+            <table style="width: 100%;">
+                <tr>
+                    <td> Assement Score % (Based on max score) </td>
+                    <td class="score" id="ass_score"> 0 </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <p> <b>Review completed by:</b> <span id="reviewee_name"></span></p>
+        </div>
 <script>
     // Hold the cleaners scores and max possible scores. 
     var cleaners_score = 0;
@@ -268,7 +270,6 @@
                 document.getElementById("sec5_comments").textContent = localStorage.getItem(comment_ids[4])
     }
     get_report_data();
-    localStorage.clear();
 </script>
 </body>
 </html>
