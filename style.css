@@ -52,21 +52,24 @@ body{
 
 #inner_form_element{
     background-color: white;
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
-    padding: 10px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
     margin-top: 25px;
     border-radius: 5px;
     border-style: solid;
     border-width: 2px;
-
 }
 
 fieldset{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    /*padding: 0% 20%;
-    */  
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin: 0 auto;
+    min-width: 0;
+    width: 75%;
+
 }
 
 header#form_header{
@@ -95,10 +98,14 @@ input{
 
 #submission_element{
     background-color: white;
-    width: 50%;
+    width: 75%;
+    height: 100%;
     margin: 0 auto;
-    padding: 10px;
-    margin-top: 25px;
+    padding-top: 10%;
+    padding-bottom: 30%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 25%;
     border-radius: 5px;
     border-style: solid;
     border-width: 2px;
@@ -106,7 +113,7 @@ input{
 }
 
 .link_button{
-    width: 200px;
+    width: 75%;
     text-align: center;
 
 }
@@ -116,5 +123,14 @@ input{
 }
 
 .task{
-    padding: 4px 4px 0 0; 
+    padding: 10px 10px 0 0; 
+}
+
+.task-area-comment{
+    width: 100%;
+}
+
+#main_logo{
+    max-width: 100%;
+    max-height: 100%;
 }
