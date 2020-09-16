@@ -112,6 +112,33 @@ input{
     text-align: center;
 }
 
+#image_submit_element{
+    background-color: white;
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 40%;
+    padding-top: 10%;
+    padding-bottom: 30%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#uploadfile, #submit{
+    font-size: xx-large;
+    padding: 5%;
+}
+
+#data{
+    font-size: xx-large;
+    width: 100%;
+}
+
 .link_button{
     width: 75%;
     text-align: center;
