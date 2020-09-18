@@ -64,9 +64,8 @@ body{
 }
 
 fieldset{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin: 0 auto;
+
+    margin: 3% auto;
     min-width: 0;
     width: 75%;
 
@@ -129,9 +128,20 @@ input{
     font-size: xx-large;
 }
 
+.image_button{
+    width: 50%;
+    height: 80%;
+    font-size: xx-large;
+}
+
 #uploadfile, #submit{
     font-size: xx-large;
     padding: 5%;
+}
+
+#sb{
+    margin-top: 5%;
+    margin-left: 8%;
 }
 
 

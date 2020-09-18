@@ -341,11 +341,36 @@
 					<textarea class="task-area-comment"	id="ldockcomments" name="Loading dock and drain additional comments" placeholder="Additional comments."></textarea>	
 				</fieldset>
 				<fieldset>
+					<legend class="task-area-heading"> Lifts and Ramps </legend>
+					<div class="task" id="lifts">
+						<span class="task-heading"> Lifts: </span>
+						<select name="Lifts" id="Lifts">
+							<option value="Not Applicable">Not Applicable</option>
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+						</select>
+					</div>
+					<div class="task" id="ramps">
+						<span class="task-heading"> Ramps: </span>
+						<select name="Bin area" id="Ramps">
+							<option value="Not Applicable">Not Applicable</option>
+							<option value="Satisfactory"> Satisfactory </option>
+							<option value="Highly Satisfactory">Highly Satisfactory </option>
+							<option value="Unsatisfactory"> Unsatisfactory</option>
+							<option value="Highly Unsatisfactory"> Highly Unsatisfactory </option>
+						</select>
+					</div>
+					<br>
+					<textarea class="task-area-comment"	id="lrcomments" name="Loading dock and drain additional comments" placeholder="Additional comments."></textarea>	
+				</fieldset>
+				<fieldset>
 					<legend class="task-area-heading"> Aldi management and staff comments </legend>
 					<textarea class="task-area-comment"	id="aldicomments" name="Aldi management and staff comments" placeholder="Comments."></textarea>	
 				</fieldset>
 				
-				<input type="button" onclick="submit_form()" value="Submit inspection">
+				<input type="button" onclick="submit_form()" value="Submit inspection" id="sb">
 				
 				<input type="submit" id='subbtn' style="display: none;" onclick="">
 
@@ -414,9 +439,9 @@
 
 				var task_ids = ["Trolley bay and surrounding floor area", "BabySeats", "Metalrailing", "Bins", "Liquor glass and perspex", "Liquor block stainless bumper", "Airlock windows", "Cobwebs", "Entry mat", 
 				"Chiller perspex", "Milk chiller price stripping", "Metal grates", "Stainless bumpers", "Hard surfaces and splash back", "Kitchen floor", "Fridge, cupboards, and microwave", "Bathroom sink and mirror",
-				"Toilet", "Bathroom floor", "Lobby mirror and door stainless", "Lobby floor", "Loading dock area", "Bin area", "Drain channels", "Compactor chute", "Internal drain", "Back of house"];
+				"Toilet", "Bathroom floor", "Lobby mirror and door stainless", "Lobby floor", "Loading dock area", "Bin area", "Drain channels", "Compactor chute", "Internal drain", "Back of house", "Lifts", "Ramps"];
 
-				var comment_ids = ["tbextcomments", "intcomments" ,"chillercomments", "amenitiescomments" ,"ldockcomments", "aldicomments", "location", "form_end", "cleaner_name", "firstName", "lastName"]; 
+				var comment_ids = ["tbextcomments", "intcomments" ,"chillercomments", "amenitiescomments" ,"ldockcomments","lrcomments", "aldicomments", "location", "form_end", "cleaner_name", "firstName", "lastName"]; 
 				for ( var i = 0; i< task_ids.length; i++){
 					value = document.getElementById(task_ids[i]).value;
 					localStorage.setItem(task_ids[i], value); 

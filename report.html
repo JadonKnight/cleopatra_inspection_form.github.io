@@ -196,6 +196,28 @@
             <p id="sec5_comments"></p>
         </div>
         <hr>
+        <div id="Section6">
+            <h4>
+            <u>Lifts and Ramps (if applicable)</u> 
+            </h4>
+            <table style="width: 100%;">
+                <tr>
+                    <th>Tasks</th>
+                    <th class="score">Score</th>
+                </tr>
+                <tr>
+                    <td> Lifts</td>
+                    <td class="score" id="Lifts"> 3 </td>
+                </tr>
+                <tr>
+                    <td>Ramps</td>
+                    <td class="score" id="Ramps">3 </td>
+                </tr>
+            </table>
+            <p><b>Comments:</b></p>
+            <p id="sec6_comments"></p>
+        </div>
+        <hr>
         <div id="Total Score">
             <h4>
             <u>Total Score</u> 
@@ -219,9 +241,9 @@
 
                 var task_ids = ["Trolley bay and surrounding floor area", "BabySeats", "Metalrailing", "Bins", "Liquor glass and perspex", "Liquor block stainless bumper", "Airlock windows", "Cobwebs", "Entry mat", 
                 "Chiller perspex", "Milk chiller price stripping", "Metal grates", "Stainless bumpers", "Hard surfaces and splash back", "Kitchen floor", "Fridge, cupboards, and microwave", "Bathroom sink and mirror",
-                "Toilet", "Bathroom floor", "Lobby mirror and door stainless", "Lobby floor", "Loading dock area", "Bin area", "Drain channels", "Compactor chute", "Internal drain", "Back of house"];
+                "Toilet", "Bathroom floor", "Lobby mirror and door stainless", "Lobby floor", "Loading dock area", "Bin area", "Drain channels", "Compactor chute", "Internal drain", "Back of house", "Lifts", "Ramps"];
 
-				var comment_ids = ["tbextcomments", "intcomments" ,"chillercomments", "amenitiescomments" ,"ldockcomments", "aldicomments"]; 
+				var comment_ids = ["tbextcomments", "intcomments" ,"chillercomments", "amenitiescomments" ,"ldockcomments", "lrcomments"]; 
 
                 
 
@@ -268,6 +290,7 @@
                 document.getElementById("sec3_comments").textContent = localStorage.getItem(comment_ids[2])
                 document.getElementById("sec4_comments").textContent = localStorage.getItem(comment_ids[3])
                 document.getElementById("sec5_comments").textContent = localStorage.getItem(comment_ids[4])
+                document.getElementById("sec6_comments").textContent = localStorage.getItem(comment_ids[5])
     }
     get_report_data();
 </script>
